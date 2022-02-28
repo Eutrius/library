@@ -53,7 +53,7 @@ body {
 
 #add-btn {
     width: 5rem;
-    height: 15rem;
+    height: 12rem;
     font-size: 2rem;
     flex-direction: column;
     gap: 2rem;
@@ -78,10 +78,9 @@ body {
 .book {
     max-height: 25rem;
     max-width: 5rem;
-    min-height: 15rem;
+    min-height: 12rem;
     min-width: 3rem;
-    height: fit-content;
-    padding: 0.5rem;
+    padding:  1.5rem 0.5rem;
     background-color: white;
     display: flex;
     justify-content: center;
@@ -90,15 +89,17 @@ body {
 }
 
 .book > p {
+    margin: 0;
     writing-mode: vertical-lr;
     font-weight: 400;
+    font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
 .book:hover {
-    transform: scale(1.05);
+    transform: scale(1.1);
     margin-bottom: 1rem;
 }
 
@@ -152,18 +153,18 @@ form > p {
     cursor: pointer;
     width: 5rem;
     height: 3rem;
-    margin: 1rem;
+    margin: 0.4rem;
 }
 
 .btn:hover {
     transform: scale(1.1);
 }
 
-#save-btn {
+#save-btn,#edit-btn {
     background-color: lightgreen;
 }
 
-#close-btn {
+#close-btn, #delete-btn {
     background-color: rgb(240, 78, 78);
 }
 
@@ -172,6 +173,9 @@ form > p {
     animation-timing-function: ease;
 }
 
+.hide-btn {
+    display: none;
+}
 
 @keyframes from-top {
     0% {

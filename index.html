@@ -17,12 +17,6 @@
                         </svg>
                     </div>
                     <p>Add Book</p>
-                </div>    
-                <div class="book">
-                    <p>The lord of the Rings akdjdaksjdhasdkjasdhaskdjasdhakj</p>
-                </div>
-                <div class="book">
-                    <p>The</p>
                 </div>
             </div>
             <div id="shelf"></div>
@@ -30,8 +24,8 @@
                 <div class="support"></div>
                 <div class="support"></div>
             </div>
-            <div id="new-book">
-                <form>
+            <div id="new-book" class="animate-from-top">
+                <form autocomplete="off">
                     <label for="book-title">Title</label>
                     <input type="text" id="book-title" name="book-title" class="input-bar" required>
                     <label for="book-author">Author</label>
@@ -40,14 +34,16 @@
                     <input type="number" id="book-pages" name="book-pages" class="input-bar" required>
                     <p>Have you read it?</p>
                     <div>
-                        <input type="radio" name="read" id="read-yes" value="read-yes" required>
+                        <input type="radio" name="read" id="read-yes" value="true" required checked>
                         <label for="read-yes">Yes</label>
-                        <input type="radio" name="read" id="read-no" value="read-no" required>
+                        <input type="radio" name="read" id="read-no" value="false" required>
                         <label for="read-no">No</label>
                     </div>
                     <div>
                         <button id="close-btn" type="button" class="btn">Close</button>
-                        <button id="save-btn" type="submit" class="btn">Save</button>
+                        <button id="delete-btn" type="button" class="btn hide-btn">Delete</button>
+                        <button id="save-btn" type="sumbit" class="btn">Save</button>
+                        <button id="edit-btn" type="button" class="btn hide-btn">Edit</button>
                     </div>
                 </form>
             </div>  
