@@ -85,7 +85,8 @@ function createBookDiv(book) {
     bookDiv.style.width = `${bookWidth}rem`;
     bookDiv.addEventListener("click", showBookInfo);
     let bookTitle = document.createElement('p');
-    bookTitle.textContent = book.title;
+    let textNode = document.createTextNode(book.title);
+    bookTitle.appendChild(textNode);
     bookDiv.appendChild(bookTitle);
     return bookDiv;
 }
@@ -117,7 +118,7 @@ function showBookInfo(e) {
     if (currBookId == bookId) return;
     closeModal();
     currBookId = bookId;
-    let book = booksCollection  [currBookId];
+    let book = booksCollection[currBookId];
     for (let input of formInputs) {
         input.disabled = true;
     }

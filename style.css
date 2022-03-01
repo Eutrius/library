@@ -19,7 +19,7 @@ body {
     height: 100%;
     width: 100%;
     display: grid;
-    grid-template-rows: 10fr 1fr 1fr;
+    grid-template-rows: 10fr 1fr 1fr 0.0001fr;
     overflow-x: scroll;
 }
 #container::-webkit-scrollbar,#container::-webkit-scrollbar-thumb {
@@ -82,20 +82,23 @@ body {
     min-width: 3rem;
     padding:  1.5rem 0.5rem;
     background-color: white;
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    cursor: pointer;
+
 }
 
 .book > p {
+    max-height: inherit;
     margin: 0;
-    writing-mode: vertical-lr;
-    font-weight: 400;
-    font-size: 1.5rem;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
+    writing-mode: vertical-lr;
+    font-weight: 400;
+    font-size: 1.5rem;
+
 }
 
 .book:hover {
@@ -175,6 +178,11 @@ form > p {
 
 .hide-btn {
     display: none;
+}
+
+footer > p {
+    margin: 0;
+    text-align: center;
 }
 
 @keyframes from-top {
